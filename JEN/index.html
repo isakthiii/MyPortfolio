@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sakthi Eswaran — Portfolio</title>
+  <meta name="description" content="Portfolio of Sakthi Eswaran, IT engineering student. Projects, GitHub, LeetCode and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="nav__logo" aria-label="Back to top">sakthi.</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" class="theme" aria-label="Switch colour theme">
+        <span class="theme__dot"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="hero__hello">Hi, I'm</p>
+      <h1 class="hero__name" id="heroName" aria-label="Sakthi Eswaran">
+        <span class="line" aria-hidden="true">Sakthi</span>
+        <span class="line" aria-hidden="true">Eswaran</span>
+      </h1>
+      <p class="hero__role">
+        I'm an IT engineering student who builds small, useful things for the web.
+        <span class="typed-wrap">Right now I'm into <span id="typed" class="typed"></span><span class="caret"></span></span>
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="#projects">See my projects</a>
+        <a class="btn btn--line" href="mailto:ursakthi19@gmail.com">Email me</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="section__title">About</h2>
+      <div class="about">
+        <p class="about__lead">
+          I'm a second-semester student at Dhanalakshmi Srinivasan Engineering College, Perambalur,
+          studying Information Technology under Anna University.
+        </p>
+        <p>
+          I like turning everyday problems into small apps and websites. I practise problem solving
+          on LeetCode, keep my code on GitHub, and I'm always learning something new,
+          from web development to Web3.
+        </p>
+        <ul class="facts">
+          <li><span>Studying</span> B.Tech IT, Anna University (R2023)</li>
+          <li><span>College</span> DSEC, Perambalur</li>
+          <li><span>Practising</span> Data structures and algorithms</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section__title">Projects</h2>
+      <div class="projects">
+        <a class="project" href="https://github.com/isakthiii/UrStudyHub" target="_blank" rel="noopener">
+          <div class="project__top">
+            <h3>UrStudyHub</h3>
+            <span class="project__tag">HTML · CSS · JS</span>
+          </div>
+          <p>A study resource website where students can find notes and question papers in one place.</p>
+          <span class="project__link">View on GitHub</span>
+        </a>
+
+        <a class="project" href="https://github.com/isakthiii/expense-tracker" target="_blank" rel="noopener">
+          <div class="project__top">
+            <h3>Expense Tracker</h3>
+            <span class="project__tag">Python</span>
+          </div>
+          <p>My first app: log what you spend and see where your money goes.</p>
+          <span class="project__link">View on GitHub</span>
+        </a>
+
+        <a class="project project--more" href="https://github.com/isakthiii?tab=repositories" target="_blank" rel="noopener">
+          <h3>More on GitHub</h3>
+          <p>Every repository, including new experiments as I build them.</p>
+          <span class="project__link">Browse all repositories</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="section__title">Skills</h2>
+      <div class="skills">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span>
+        <span>Git &amp; GitHub</span><span>Problem solving</span><span>Responsive design</span>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section class="section">
+      <h2 class="section__title">Find me online</h2>
+      <div class="links">
+        <a href="https://github.com/isakthiii" target="_blank" rel="noopener">
+          <strong>GitHub</strong><span>isakthiii</span>
+        </a>
+        <a href="https://leetcode.com/u/sakthicoding/" target="_blank" rel="noopener">
+          <strong>LeetCode</strong><span>sakthicoding</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sakthisaan-1906-/" target="_blank" rel="noopener">
+          <strong>LinkedIn</strong><span>sakthisaan-1906-</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2 class="contact__big">Let's build something together.</h2>
+      <form id="mailForm" class="form">
+        <label>
+          Your name
+          <input type="text" id="fName" required autocomplete="name" />
+        </label>
+        <label>
+          Message
+          <textarea id="fMsg" rows="4" required></textarea>
+        </label>
+        <button class="btn btn--solid" type="submit">Send email</button>
+        <p class="form__note" id="formNote" role="status"></p>
+      </form>
+      <p class="contact__mail">
+        Or write directly to <a href="mailto:ursakthi19@gmail.com">ursakthi19@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Sakthi Eswaran</span>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
